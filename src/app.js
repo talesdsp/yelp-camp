@@ -51,5 +51,5 @@ app.get("*", function(request, response) {
 const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT || 9876;
 app.listen(PORT, HOST, () => {
-  debug(`The YelpCamp Server Has Started on ${PORT}`);
+  debug(`The YelpCamp Server Has Started on /${HOST}:${PORT}`);
 });
