@@ -3,11 +3,14 @@
   "version": "2.0.0",
   "description": "YelpCamp",
   "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node dist/app.js",
-    "client": "cd client && yarn install && yarn build",
+    "client": "cd frontend && yarn install && yarn build",
     "compile": "sucrase ./src -d ./dist --transforms imports",
-    "prod": "yarn client && yarn compile && yarn start",
+    "prod": "yarn install && yarn compile && yarn client && yarn start",
     "test": "json-server __tests__/fakeAPI.js -w",
     "dev": "set DEBUG=http & nodemon --exec sucrase-node ./src/app.js"
   },
@@ -23,6 +26,7 @@
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
     "geocoder": "^0.2.3",
+    "helmet": "^3.22.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.5",
     "morgan": "^1.9.1",

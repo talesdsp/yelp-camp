@@ -36,7 +36,7 @@ app.use(
 app.use(compression());
 app.use(helmet());
 
-app.use(express.static(path.resolve(__dirname, "../client/build/")));
+app.use(express.static(path.resolve(__dirname, "../frontend/build/")));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -46,7 +46,7 @@ app.use("/api/campgrounds", campgroundRoutes);
 app.use("/api/campgrounds/:id/comments", commentRoutes);
 
 app.get("*", function(request, response) {
-  response.sendFile(path.resolve(__dirname, "../client/build/", "index.html"));
+  response.sendFile(path.resolve(__dirname, "../frontend/build/", "index.html"));
 });
 
 const PORT = process.env.PORT;
