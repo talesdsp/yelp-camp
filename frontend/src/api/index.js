@@ -1,6 +1,6 @@
 import Axios from "axios";
 import qs from "querystring";
-const baseURL = "http://localhost:9876/api";
+const baseURL = "http://0.0.0.0:9876/api";
 
 const user = {
   checkUser: () => Axios.get(baseURL + "/check"),

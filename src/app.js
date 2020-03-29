@@ -48,8 +48,8 @@ app.use("/api/campgrounds/:id/comments", commentRoutes);
 app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build/", "index.html"));
 });
-
+const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT;
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   debug(`The YelpCamp Server Has Started on ${PORT}`);
 });
