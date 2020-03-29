@@ -49,7 +49,7 @@ app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build/", "index.html"));
 });
 const HOST = process.env.HOST || "0.0.0.0";
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 9876;
 app.listen(PORT, HOST, () => {
   debug(`The YelpCamp Server Has Started on ${PORT}`);
 });
