@@ -23,7 +23,7 @@
     "cors": "^2.8.5",
     "cuid": "^2.1.8",
     "debug": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-react-views": "^0.11.0",
     "geocoder": "^0.2.3",
     "helmet": "^3.22.0",
